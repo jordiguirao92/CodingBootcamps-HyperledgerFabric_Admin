@@ -98,13 +98,13 @@ Podemos encontrar los binarios del peer en la carpeta `bin` en el repositorio de
 
 Podemos configurar las variables de entorno que nos permitirá operar el peer CLI como Org1.
 
-`
-export  CORE_PEER_TLS_ENABLED=true  
-export  CORE_PEER_LOCALMSPID="Org1MSP"  
-export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt  
-export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp  
-export CORE_PEER_ADDRESS=localhost:7051
-`
+
+`export  CORE_PEER_TLS_ENABLED=true`
+`export  CORE_PEER_LOCALMSPID="Org1MSP"`
+`export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt`
+`export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp`
+`export CORE_PEER_ADDRESS=localhost:7051`
+
 
 Podemos interactuar con el chaincode desde nuestra CLI ejecutando el siguiente comando: 
 `peer chaincode query -C mychannel -n fabcar -c '{"Args":["queryAllCars"]}' `
@@ -117,13 +117,13 @@ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.exa
 `
 
 Podemos cambiar la configuración para ejecutar chaincode desde la Org2.
-`
-export  CORE_PEER_TLS_ENABLED=true  
-export  CORE_PEER_LOCALMSPID="Org2MSP"  
-export  CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt  
-export  CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp  
-export  CORE_PEER_ADDRESS=localhost:9051
-`
+
+`export  CORE_PEER_TLS_ENABLED=true`
+`export  CORE_PEER_LOCALMSPID="Org2MSP"`
+`export  CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt`
+`export  CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp`
+`export  CORE_PEER_ADDRESS=localhost:9051`
+
 
 Podemos interactuar con el chaincode desde la peer0.org2.example.com con el comando: 
 `peer chaincode query -C mychannel -n fabcar -c '{"Args":["queryCar","CAR9"]}'`
