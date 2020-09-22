@@ -29,13 +29,14 @@ En este directorio encontramos el script `network-sh` que nos permitirá arranca
 
 El comando `./network.sh -h` nos proporciona una ayuda sobre el script.
 
-IMAGEN
+![](./Imagenes/1.png)
+![](./Imagenes/1.1.png)
 
 Dentro de la carpeta `test-network`, podemos ejecutar el comando `./network.sh down` para eliminar cualquier container ya creado una vez arrancada la red.
 
 Para arrancar la red usamos el comando: `./network.sh up`. Este comando nos creará una red de Fabric con dos nodos peer y un nodo ordering.
 
-IMAGEN
+IMAGEN1.1
 
 De forma predefinida la red utiliza la herramienta `cryptogen`, aunque podemos arrancar la red sin los certificados de autoridad.
 
@@ -87,7 +88,7 @@ Por defecto se instalará la versión en Go, pero podemos instalar la versión d
 
 Si el comando se ha ejecutado correctamente podemos ver lo siguiente: 
 
-IMAGEN
+IMAGEN2
 
 ## 6. Interactuar con la red
 
@@ -114,6 +115,9 @@ Podemos interactuar con el chaincode desde nuestra CLI ejecutando el siguiente c
 `peer chaincode query -C mychannel -n fabcar -c '{"Args":["queryAllCars"]}' `
 
 Podremos ver una lista de coches.
+
+IMAGEN3
+
 
 Podemos invocar chaincode para cambiar el propietario de un coche:
 `
