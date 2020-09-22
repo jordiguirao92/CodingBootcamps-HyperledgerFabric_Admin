@@ -36,7 +36,7 @@ Dentro de la carpeta `test-network`, podemos ejecutar el comando `./network.sh d
 
 Para arrancar la red usamos el comando: `./network.sh up`. Este comando nos creará una red de Fabric con dos nodos peer y un nodo ordering.
 
-IMAGEN1.1
+![](./Imagenes/1.3.png)
 
 De forma predefinida la red utiliza la herramienta `cryptogen`, aunque podemos arrancar la red sin los certificados de autoridad.
 
@@ -88,7 +88,7 @@ Por defecto se instalará la versión en Go, pero podemos instalar la versión d
 
 Si el comando se ha ejecutado correctamente podemos ver lo siguiente: 
 
-IMAGEN2
+![](./Imagenes/2.png)
 
 ## 6. Interactuar con la red
 
@@ -116,7 +116,7 @@ Podemos interactuar con el chaincode desde nuestra CLI ejecutando el siguiente c
 
 Podremos ver una lista de coches.
 
-IMAGEN3
+![](./Imagenes/3.png)
 
 
 Podemos invocar chaincode para cambiar el propietario de un coche:
