@@ -44,10 +44,8 @@ Podemos encontrar el material criptográfico de las organizaciones en el directo
 `test-network/organizations/peerOrganizations`
 
 Utilizamos el siguiente comando y la herramienta configtxgen para imprimir la definición de la Org3.
-`
-export  FABRIC_CFG_PATH=$PWD  
-../../bin/configtxgen -printOrg Org3MSP > ../organizations/peerOrganizations/org3.example.com/org3.json
-`
+`export  FABRIC_CFG_PATH=$PWD  
+../../bin/configtxgen -printOrg Org3MSP > ../organizations/peerOrganizations/org3.example.com/org3.json`
 
 ## 3. Iniciar los componentes de Org3
 Una vez creado el material criptográfico ya podemos arrancar el Org3 peer. 
@@ -63,6 +61,7 @@ Utilizamos el siguiente comando para ejecutar el contenedor Org3CLI:
 El contenedor nos proporciona acceso al material criptográfico y los certificados TLS para todas las organizaciones. Podemos usar las variables de entorno para operar el contendor Org3CLI como administador de Org1, Org2 o Org3.
 
 `export  ORDERER_CA=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem`
+
 `export  CHANNEL_NAME=mychannel`
 
 
@@ -73,8 +72,11 @@ Podemos comprar que las variables de han configurado correctamente con el comand
 
 Para preparar la configuración del canal, necesitamos operar como administrador. Como la Org3 no está aún unida al canal, utilizaremos la Org1 para realizar la configuración.
 `export  CORE_PEER_LOCALMSPID="Org1MSP"`
+
 `export  CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt`
+
 `export  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp`
+
 `export  CORE_PEER_ADDRESS=peer0.org1.example.com:7051`
 
 
@@ -123,8 +125,11 @@ Primero firmaremos la actualización como Org1. Importante exportar las variable
 
 Seguidamente exportamos las variables de entorno para operar como Org2:
 `export  CORE_PEER_LOCALMSPID="Org2MSP"`
+
 `export  CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt`
+
 `export  CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp`
+
 `export  CORE_PEER_ADDRESS=peer0.org2.example.com:9051`
 
 Con el siguiente comando actualizamos la configuración del canal:
