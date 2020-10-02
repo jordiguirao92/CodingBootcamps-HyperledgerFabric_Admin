@@ -1,6 +1,8 @@
 ﻿
 # Proyecto 1: Crear e interactuar con una red de Hyperledger Fabric
 
+https://hyperledger-fabric.readthedocs.io/en/latest/test_network.html 
+
 En este proyecto crearemos un red de Hyperledger Fabric de pruebas en una máquina local y añadiremos un canal a la red.
 
 1. Usar la red de test de Fabric.
@@ -82,13 +84,12 @@ Para firmar una transacción cada organización necesita invocar y ejecutar el c
 El chaincode se instala en cada peer de una organización y después se desplega en el canal. 
 Podemos iniciar un chaincode en el canal con el comando: 
 `./network.sh deployCC`
-Este comando instalará el chaincode `fabcar` en los peers peer0.org1.example.com y peer0.org1.example.com; y desplegará el chaincode en el canal.
+Este comando instalará el chaincode `basic` en los peers peer0.org1.example.com y peer0.org1.example.com; y desplegará el chaincode en el canal.
 
 Por defecto se instalará la versión en Go, pero podemos instalar la versión de Java o Javascript utilizando el parámetro `-l`.
 
 Si el comando se ha ejecutado correctamente podemos ver lo siguiente: 
 
-![](./Imagenes/2.png)
 
 ## 6. Interactuar con la red
 
@@ -111,17 +112,18 @@ Podemos configurar las variables de entorno que nos permitirá operar el peer CL
 `export CORE_PEER_ADDRESS=localhost:7051`
 
 
+Podemos inicializar las ledger con algunos assets con el comando: 
+`peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n basic --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"InitLedger","Args":[]}'`
+
 Podemos interactuar con el chaincode desde nuestra CLI ejecutando el siguiente comando: 
-`peer chaincode query -C mychannel -n fabcar -c '{"Args":["queryAllCars"]}' `
+`peer chaincode query -C mychannel -n basic -c '{"Args":["GetAllAssets"]}'`
 
-Podremos ver una lista de coches.
-
-![](./Imagenes/3.png)
+![](./Imagenes/2.png)
 
 
-Podemos invocar chaincode para cambiar el propietario de un coche:
+Podemos invocar chaincode para cambiar el propietario de un asset:
 `
-peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n fabcar --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"changeCarOwner","Args":["CAR9","Dave"]}'
+peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n basic --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"TransferAsset","Args":["asset6","Christopher"]}'
 `
 
 Podemos cambiar la configuración para ejecutar chaincode desde la Org2.
@@ -138,7 +140,7 @@ Podemos cambiar la configuración para ejecutar chaincode desde la Org2.
 
 
 Podemos interactuar con el chaincode desde la peer0.org2.example.com con el comando: 
-`peer chaincode query -C mychannel -n fabcar -c '{"Args":["queryCar","CAR9"]}'`
+`peer chaincode query -C mychannel -n basic -c '{"Args":["ReadAsset","asset6"]}'`
 
 
 ## 7. Parar la red
