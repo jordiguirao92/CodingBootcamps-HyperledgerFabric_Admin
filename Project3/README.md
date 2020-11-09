@@ -60,6 +60,7 @@ En el archivo `docker-compose.yaml`, revisamos que tenemos la siguiente configur
           - ./organizations:/tmp/crypto
           - walletstore:/opt/wallet
 `
+
 En el archivo `connection-profile/first-network.json` revisamos que los directorios relacionados con los certificados, claves, etc de las organizaciones y peers sean correctos.
 
 
