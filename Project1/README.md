@@ -1,5 +1,5 @@
 ﻿
-# Proyecto 1: Crear e interactuar con una red de Hyperledger Fabric
+# Proyecto 1: Crear e interactuar con una red de Hyperledger Fabric (HF)
 
 https://hyperledger-fabric.readthedocs.io/en/latest/test_network.html 
 

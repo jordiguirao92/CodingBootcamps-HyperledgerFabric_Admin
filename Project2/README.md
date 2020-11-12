@@ -1,6 +1,6 @@
 ﻿
 
-# Proyecto 2: Añadir una Organización a una red de Hyperledger Fabric
+# Proyecto 2: Añadir una Organización a una red de Hyperledger Fabric (HF)
 
 En base al proyecto 1 añadiremos una nueva organización org3 a la red.
 
