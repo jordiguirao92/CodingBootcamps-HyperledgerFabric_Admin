@@ -7,10 +7,10 @@
 
 
  ### PROYECTO 1
- Proyecto 1: Crear e interactuar con una red de Hyperledger Fabric
+ Proyecto 1: Crear e interactuar con una red de Hyperledger Fabric.
 
  ### PROYECTO 2
- Proyecto 2: Añadir una organización a un canal de Hyperledger Fabric
+ Proyecto 2: Añadir una organización a un canal de Hyperledger Fabric.
 
  ### PROYECTO 3
- Proyecto 3: Instalar Hyperledger Explorer
+ Proyecto 3: Instalar Hyperledger Explorer.

@@ -143,7 +143,7 @@ Podemos interactuar con el chaincode desde la peer0.org2.example.com con el coma
 `peer chaincode query -C mychannel -n basic -c '{"Args":["ReadAsset","asset6"]}'`
 
 
-## 7. Parar la red
+## 7. Parar la red 
 Para parar la red utilizamos el comando: 
 `./network.sh down`
 
