@@ -2,6 +2,8 @@
 
 # Proyecto 3: Instalar Hyperledger Explorer
 
+Para más información sobre este curso visite el siguiente enlace: https://learn.coding-bootcamps.com/p/blockchain-hyperledger-fabric-para-el-administrador-del-sistema 
+
 En base al proyecto 1 instalaremos Hyperledger Explorer, donde podremos ver de una manera visual el funcionamiento de nuestra red.
 
 1. Iniciar y preparar la red test-network de Hyperledger Fabric.

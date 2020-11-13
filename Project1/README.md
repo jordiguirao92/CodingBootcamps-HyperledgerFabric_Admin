@@ -1,7 +1,9 @@
 ﻿
 # Proyecto 1: Crear e interactuar con una red de Hyperledger Fabric (HF)
 
-https://hyperledger-fabric.readthedocs.io/en/latest/test_network.html 
+Para más información sobre este curso visite el siguiente enlace: https://learn.coding-bootcamps.com/p/blockchain-hyperledger-fabric-para-el-administrador-del-sistema 
+
+Recursos: https://hyperledger-fabric.readthedocs.io/en/latest/test_network.html 
 
 En este proyecto crearemos un red de Hyperledger Fabric de pruebas en una máquina local y añadiremos un canal a la red.
 

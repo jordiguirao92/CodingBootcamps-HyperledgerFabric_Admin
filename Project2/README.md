@@ -2,6 +2,8 @@
 
 # Proyecto 2: Añadir una Organización a una red de Hyperledger Fabric (HF)
 
+Para más información sobre este curso visite el siguiente enlace: https://learn.coding-bootcamps.com/p/blockchain-hyperledger-fabric-para-el-administrador-del-sistema 
+
 En base al proyecto 1 añadiremos una nueva organización org3 a la red.
 
 1. Iniciar Org3 en el canal

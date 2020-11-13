@@ -3,7 +3,7 @@
 
  Los archivos de este repositorio son del curso de Introducción a Hyperledger Fabric para el administrador de Coding Bootcamps: http://coding-bootcamps.com/es/ 
 
- Para más información sobre este curso visite el siguiente enlace: https://learn.coding-bootcamps.com/p/introduccion-a-node-js-express-js-y-mongodb 
+ Para más información sobre este curso visite el siguiente enlace: https://learn.coding-bootcamps.com/p/blockchain-hyperledger-fabric-para-el-administrador-del-sistema 
 
 
  ### PROYECTO 1
