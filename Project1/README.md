@@ -45,7 +45,7 @@ Para arrancar la red usamos el comando: `./network.sh up`. Este comando nos crea
 De forma predefinida la red utiliza la herramienta `cryptogen`, aunque podemos arrancar la red sin los certificados de autoridad.
 
 
-## 3. Componentes de la res de pruebas.
+## 3. Componentes de la red de pruebas.
 
 Una vez la red desplegada, podemos examinar los componentes que componen nuestra red: 
 `docker ps -a`
