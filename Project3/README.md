@@ -82,5 +82,5 @@ Si interactuamos con nuestra red `test-network` (como hemos hecho en el proyecto
 
 ## 4. Parar Hyperledger Explorer
 
-Para parar el servicio de Hyperledger Explorer utilizamos el comando: `docker-composer down`
+Para parar el servicio de Hyperledger Explorer utilizamos el comando: `docker-compose down`
 
